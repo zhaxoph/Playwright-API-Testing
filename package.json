@@ -1,0 +1,25 @@
+{
+  "name": "playwright-api-testing",
+  "version": "1.0.0",
+  "description": "Automated API testing framework using Playwright",
+  "scripts": {
+    "test": "pnpm exec playwright test",
+    "test:ui": "pnpm exec playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:api": "playwright test e2e/test_characters_by_ids.spec.ts",
+    "report": "playwright show-report",
+    "clean": "rimraf test-results/ playwright-report/",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "prettier": "^3.2.5",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12"
+  }
+}
